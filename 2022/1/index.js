@@ -9,13 +9,13 @@ for (calorie of input) {
         calorieIndex += 1;
         continue;
     } else {
-        if (!calorieData[`i${calorieIndex}`]) calorieData[`i${calorieIndex}`] = [];
-        calorieData[`i${calorieIndex}`].push(calorie);
+        if (!calorieData[calorieIndex]) calorieData[calorieIndex] = [];
+        calorieData[calorieIndex].push(calorie);
     };
 };
 for (calories of Object.values(calorieData)) {
     calorieTotals.push(parseInt(Object.values(calories).reduce((a, b) => a + b)));
 };
 calorieTotals = calorieTotals.sort((a, b) => b - a);
-console.log(calorieTotals[0]); // Part 1 answer
-console.log(calorieTotals[0] + calorieTotals[1] + calorieTotals[2]); // Part 2 answer
+console.log(`Part 1: ${calorieTotals[0]}`);
+console.log(`Part 2: ${calorieTotals[0] + calorieTotals[1] + calorieTotals[2]}`);
