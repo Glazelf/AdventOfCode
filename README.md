@@ -1,2 +1,5 @@
 # Advent Of Code
-As found on [adventofcode.com](https://adventofcode.com/).
+
+Year | Language
+--- | ---
+2022 | JavaScript
