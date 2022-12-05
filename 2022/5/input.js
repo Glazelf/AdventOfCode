@@ -1,5 +1,5 @@
 var stacks = `
-[V]     [C]     [M]
+                [V]     [C]     [M]
 [V]     [J]     [N]     [H]     [V]
 [R] [F] [N]     [W]     [Z]     [N]
 [H] [R] [D]     [Q] [M] [L]     [B]
