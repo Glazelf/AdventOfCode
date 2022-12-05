@@ -25,7 +25,7 @@ orders.forEach(order => {
     order = order.substring(5).replace(" from ", "-").replace(" to ", "-");
     ordersArray.push(order.split("-"));
 });
-// Part1
+// Part2
 let stacksResult1 = stacksObject;
 ordersArray.forEach(order => {
     let amount = order[0];
