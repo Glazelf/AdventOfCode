@@ -1,6 +1,6 @@
 const fs = require("fs");
 eval(fs.readFileSync("./input.js", "utf8"));
-
+// Part 1
 let inputArray = input.split("\n");
 let totalSize = 0;
 let directorySizes = {};
@@ -31,3 +31,11 @@ for (let line of inputArray) {
 let smallDirectories = Object.values(directorySizes).filter(size => size <= 100000);
 let smallDirectoriesSize = smallDirectories.reduce((acc, elem) => acc + elem, 0);
 console.log(`Part 1: ${smallDirectoriesSize}`);
+// Part 2
+let storageUsage = directorySizes[root];
+let storageCapacity = 70000000;
+let freeStorageGoal = 30000000;
+let minimumSizeToDelete = freeStorageGoal + storageUsage - storageCapacity;
+let deletedFiles = Object.values(directorySizes).filter(size => size >= minimumSizeToDelete);
+let directorySize = Math.min(...deletedFiles);
+console.log(`Part 2: ${directorySize}`);
